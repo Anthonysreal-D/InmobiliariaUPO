@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+class_manager,class_manager,model_inmobiliaria_upo_empresa,group_inmobiliaria_manager,1,1,1,1
