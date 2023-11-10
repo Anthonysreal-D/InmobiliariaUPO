@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-class_manager,class_manager,model_inmobiliaria_upo_empresa,group_inmobiliaria_manager,1,1,1,1
+empresa_manager,empresa_manager,model_inmobiliaria_upo_empresa,group_inmobiliaria_manager,1,1,1,1
+puja_manager,puja_manager,model_inmobiliaria_upo_puja,group_inmobiliaria_manager,1,1,1,1
+subasta_manager,subasta_manager,model_inmobiliaria_upo_subasta,group_inmobiliaria_manager,1,1,1,1
+trabajador_manager,trabajdor_manager,model_inmobiliaria_upo_trabajador,group_inmobiliaria_manager,1,1,1,1

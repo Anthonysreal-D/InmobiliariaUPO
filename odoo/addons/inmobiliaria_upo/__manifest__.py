@@ -26,8 +26,11 @@
         # 'security/ir.model.access.csv',
         'security/security.xml',
         'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/empresa_views.xml',
+        'views/subasta_views.xml',
+        'views/puja_views.xml',
+        'views/trabajador_views.xml',
+        'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
