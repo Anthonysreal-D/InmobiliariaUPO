@@ -23,6 +23,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/cliente_view.xml',
+        'views/propietario_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

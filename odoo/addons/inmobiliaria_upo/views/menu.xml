@@ -5,4 +5,6 @@
   <menuitem name="InmobiliariaUPO" id="inmobiliaria_upo_menu" groups="group_inmobiliaria_upo_manager" parent="main_inmobiliaria_upo_menu"/>
 
   <menuitem name="Cliente" id="cliente_menu" parent="inmobiliaria_upo_menu" groups="group_inmobiliaria_upo_manager" action="cliente_list_action"/>
+
+  <menuitem name="Propietario" id="propietario_menu" parent="inmobiliaria_upo_menu" groups="group_inmobiliaria_upo_manager" action="propietario_list_action"/>
 </odoo>
