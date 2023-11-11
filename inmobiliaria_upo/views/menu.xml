@@ -6,5 +6,6 @@
 
     <menuitem name="Venta" id="venta_menu" parent="inmobiliaria_upo_menu" groups="group_inmobiliaria_upo_manager" action="venta_list_action"/>
     <menuitem name="Compra" id="compra_menu" parent="inmobiliaria_upo_menu" groups="group_inmobiliaria_upo_manager" action="compra_list_action"/>
+    <menuitem name="Seguro" id="seguro_menu" parent="inmobiliaria_upo_menu" groups="group_inmobiliaria_upo_manager" action="seguro_list_action"/>
 
 </odoo> 

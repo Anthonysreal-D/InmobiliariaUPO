@@ -2,3 +2,4 @@
 
 from . import venta
 from . import compra
+from . import seguro

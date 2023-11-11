@@ -1,0 +1,36 @@
+<odoo>
+    <record id="inmobiliaria_upo_seguro_form_view" model="ir.ui.view">
+        <field name="name">inmobiliaria_upo.seguro.form</field>
+        <field name="model">inmobiliaria_upo.seguro</field>
+        <field name="arch" type="xml">
+            <form string="Seguro">
+                <sheet layout="auto">
+                    <group>
+                        <field name="currency_id" invisible="1"/>
+                        <field name="importe"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="seguro_list">
+        <field name="name">Seguro list</field>
+        <field name="model">inmobiliaria_upo.seguro</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="importe" widget="monetary"/>
+            </tree>
+        </field>
+    </record>
+    <record id="seguro_list_action" model="ir.actions.act_window">
+        <field name="name">Seguros</field>
+        <field name="res_model">inmobiliaria_upo.seguro</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crea tu primer seguro</p>
+        </field>
+    </record>
+    
+</odoo>
