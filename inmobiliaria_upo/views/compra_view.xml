@@ -9,6 +9,7 @@
                         <field name="amount_total" />
                         <field name="idCliente" />
                         <field name="idPropiedad" />
+                        <field name="mensualidades"/>
                     </group>
                 </sheet>
             </form>
@@ -24,6 +25,8 @@
                 <field name="date_order" />
                 <field name="amount_total" />
                 <field name="amount_tax" />
+                <field name="mensualidades"/>
+                <field name="precioMensual"/>
                 <field name="idCliente" />
                 <field name="idPropiedad" />
             </tree>

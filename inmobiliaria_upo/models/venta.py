@@ -7,7 +7,7 @@ class venta(models.Model):
     
     _inherit = ["sale.order", "inmobiliaria_upo.operacion"]
     _name = "inmobiliaria_upo.venta"
-    _descripcion = "InmobiliariaUPO Venta"
+    _description = "InmobiliariaUPO Venta"
 
     partner_id = fields.Many2one(required=False)
     
@@ -21,7 +21,7 @@ class venta(models.Model):
     
     tag_ids = fields.Many2many(relation=False)
     
-    amount_total = fields.Monetary(compute = False, required=True)
+    amount_total = fields.Monetary(compute = False, required=True, readonly=False)
     amount_tax = fields.Monetary(compute='_comision')
     state = fields.Selection(
         selection=[
@@ -31,8 +31,11 @@ class venta(models.Model):
         default="En venta")
     
     
-    #def _comision(self):
-    #    return amount_total/100*10
+    def _comision(self):
+        if self.amount_total > 0:
+            self.amount_tax = self.amount_total/100*10
+        else:
+            self.amount_tax = 0
         
     
     #_description = 'InmobiliariaUPO venta'
