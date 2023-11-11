@@ -25,6 +25,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/venta_view.xml',
+        'views/compra_view.xml',
         'views/menu.xml'
     ],
     # only loaded in demonstration mode

@@ -1,9 +1,9 @@
 <odoo>
-    <record id="inmobiliaria_upo_venta_form_view" model="ir.ui.view">
-        <field name="name">inmobiliaria_upo.venta.form</field>
-        <field name="model">inmobiliaria_upo.venta</field>
+    <record id="inmobiliaria_upo_compra_form_view" model="ir.ui.view">
+        <field name="name">inmobiliaria_upo.compra.form</field>
+        <field name="model">inmobiliaria_upo.compra</field>
         <field name="arch" type="xml">
-            <form string="Venta">
+            <form string="Compra">
                 <sheet layout="auto">
                     <group>
                         <field name="amount_total" />
@@ -15,13 +15,12 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="venta_list">
-        <field name="name">Venta list</field>
-        <field name="model">inmobiliaria_upo.venta</field>
+    <record model="ir.ui.view" id="compra_list">
+        <field name="name">Compra list</field>
+        <field name="model">inmobiliaria_upo.compra</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
-                <field name="state" />
                 <field name="date_order" />
                 <field name="amount_total" />
                 <field name="amount_tax" />
@@ -30,12 +29,12 @@
             </tree>
         </field>
     </record>
-    <record id="venta_list_action" model="ir.actions.act_window">
-        <field name="name">Ventas</field>
-        <field name="res_model">inmobiliaria_upo.venta</field>
+    <record id="compra_list_action" model="ir.actions.act_window">
+        <field name="name">Compras</field>
+        <field name="res_model">inmobiliaria_upo.compra</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">Crea tu primera venta</p>
+            <p class="o_view_nocontent_smiling_face">Crea tu primera compra</p>
         </field>
     </record>
     
