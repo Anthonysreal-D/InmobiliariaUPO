@@ -1,0 +1,9 @@
+<odoo>
+
+    <menuitem name="InmobiliariaUPO" id="main_inmobiliaria_upo_menu" groups="group_inmobiliaria_upo_manager"/>
+
+    <menuitem name="InmobiliariaUPO" id="inmobiliaria_upo_menu" groups="group_inmobiliaria_upo_manager" parent="main_inmobiliaria_upo_menu"/>
+
+    <menuitem name="Venta" id="venta_menu" parent="inmobiliaria_upo_menu" groups="group_inmobiliaria_upo_manager" action="venta_list_action"/>
+
+</odoo> 
