@@ -13,3 +13,4 @@ class Empresa(models.Model):
      telefono = fields.Char(string="Telefono", required=True, help="Telefono de la empresa")
      email = fields.Char(string="Email", required=True, help="Email de la empresa")
 
+     ids_Trabajadores = fields.One2many("inmobiliaria_upo.trabajador",'ids_Empresas','Trabajadores')

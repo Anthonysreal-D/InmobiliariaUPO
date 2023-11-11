@@ -1,4 +1,21 @@
 <odoo>
+    <record id="inmobiliaria_upo_trabajador_form_view" model="ir.ui.view">
+        <field name="name">inmobiliaria_upo.trabajador.form</field>
+        <field name="model">inmobiliaria_upo.trabajador</field>
+        <field name="arch" type="xml">
+            <form string="Trabajador">
+                <sheet layout="auto">
+                    <group>
+                        <field name="name" />
+                        <field name="idTrabajador" />
+                        <field name="cif" />
+                        <field name="sueldo" /> 
+                        <field name="ids_Empresas" widget="many2one" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
     <record id="trabajador_list_action" model="ir.actions.act_window">
     <field name="name">Trabajador</field>
     <field name="res_model">inmobiliaria_upo.trabajador</field>
