@@ -1,0 +1,13 @@
+<odoo>
+    <!-- Top menu item -->
+  <menuitem name="Inmobiliaria" id="main_inmobiliaria_menu" groups="group_inmobiliaria_manager"/>
+
+  <!-- menu categories -->
+  <menuitem name="Menu" id="inmobiliaria_menu" groups="group_inmobiliaria_manager" parent="main_inmobiliaria_menu"/>
+
+  <!-- actions -->
+  <menuitem name="Empresa" id="empresa_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="empresa_list_action"/>
+  <menuitem name="Trabajador" id="trabajador_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="trabajador_list_action"/>
+  <menuitem name="Subasta" id="subasta_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="subasta_list_action"/>
+  <menuitem name="Puja" id="puja_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="puja_list_action"/>
+ </odoo>
