@@ -8,6 +8,7 @@ Partición del módulo y trabajo:
 -	Sergio (Operación, Compra, Venta, Seguro)
 -	Pablo (Propiedad, Tipo, Visita, Alquiler)
 -	Antonio (Empresa, Trabajador, Puja, Subasta)
+
 Todos han trabajado en el ensamblaje y union de los modelos para un unico modulo, realizando correcciones o ajustes necesarios
 los cuales no estan recogidos en las ramas personales, pero si en la rama main.
 -----------------------------------------------------------
