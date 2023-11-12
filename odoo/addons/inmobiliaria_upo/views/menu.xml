@@ -1,0 +1,13 @@
+<odoo>
+    <!-- Top menu item -->
+  <menuitem name="Inmobiliaria" id="main_inmobiliaria_menu" groups="group_inmobiliaria_upo_manager"/>
+
+  <!-- menu categories -->
+  <menuitem name="Inmobiliaria" id="inmobiliaria_menu" groups="group_inmobiliaria_upo_manager" parent="main_inmobiliaria_menu"/>
+
+  <!-- actions -->
+  <menuitem name="Alquiler" id="alquiler_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_upo_manager" action="alquiler_list_action"/>
+  <menuitem name="Propiedad" id="propiedad_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_upo_manager" action="propiedad_list_action"/>
+  <menuitem name="Tipo" id="tipo_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_upo_manager" action="tipo_list_action"/>
+  <menuitem name="Visita" id="visita_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_upo_manager" action="visita_list_action"/>
+ </odoo>
