@@ -1,4 +1,0 @@
-id,name,description,start,end,capacity,activityType,users_ids/id,instructores_id/id
-class0,"Clase 0","Descripcion de la clase 0","2023-08-12 23:59:59","2023-08-14 23:59:59",20,,"user1,user2",instructor1
-class1,"Clase 1",,"2023-08-12 23:59:59","2023-08-15 23:59:59",5,,,instructor1
-class2,"Clase 2","Descripcion de la clase 2","2023-08-12 23:59:59","2023-08-16 23:59:59",30,,"user1",instructor2
