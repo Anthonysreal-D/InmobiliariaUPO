@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-from . import operacion
+from . import operacion, seguro
 
 class venta(models.Model):
     
@@ -21,7 +21,7 @@ class venta(models.Model):
     
     tag_ids = fields.Many2many(relation=False)
     
-    amount_total = fields.Monetary(compute = False, required=True, readonly=False)
+    amount_total = fields.Monetary(compute = False, required=True)
     amount_tax = fields.Monetary(compute='_comision')
     state = fields.Selection(
         selection=[
@@ -29,7 +29,7 @@ class venta(models.Model):
             ('Comprado', "No disponible"),
         ], 
         default="En venta")
-    
+    idSeguro = fields.Many2one("inmobiliaria_upo.seguro",string="seguro")
     
     def _comision(self):
         if self.amount_total > 0:

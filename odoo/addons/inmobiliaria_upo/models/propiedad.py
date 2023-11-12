@@ -16,3 +16,5 @@ class Propiedad(models.Model):
 
       #ids_Tipos = fields.Many2one("inmobiliaria_upo.tipo",string="Tipos")
       #ids_Visitas = fields.One2many("inmobiliaria_upo.visita",'ids_Propiedades','Visitas')
+     idOperacion = fields.One2many("inmobiliaria_upo.operacion","idPropiedad","Operacion") 
+      

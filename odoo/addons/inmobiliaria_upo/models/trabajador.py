@@ -18,4 +18,4 @@ class Trabajador(models.Model):
      sueldo = fields.Integer(string="Sueldo", required=True, help="Sueldo del trabajdor")
     
      ids_Empresas = fields.Many2one("inmobiliaria_upo.empresa", string="Empresas")
-     
+     idOperacion = fields.One2many("inmobiliaria_upo.operacion","idTrabajador","Operacion") 

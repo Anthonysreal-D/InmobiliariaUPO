@@ -7,8 +7,10 @@
                 <sheet layout="auto">
                     <group>
                         <field name="amount_total" />
-                        <field name="idCliente" />
-                        <field name="idPropiedad" />
+                        <field name="idSeguro" widget="many2one"/>
+                        <field name="idCliente" widget="many2one"/>
+                        <field name="idPropiedad" widget="many2one"/>
+                        <field name="idTrabajador" widget="many2one"/>
                     </group>
                 </sheet>
             </form>
@@ -23,13 +25,18 @@
                 <field name="name" />
                 <field name="state" />
                 <field name="date_order" />
-                <field name="amount_total" />
-                <field name="amount_tax" />
+                <field name="amount_total"/>
+                <field name="amount_tax"/>
                 <field name="idCliente" />
                 <field name="idPropiedad" />
+                <field name="idSeguro" widget="many2one"/>
+                <field name="idCliente" widget="many2one"/>
+                <field name="idPropiedad" widget="many2one"/>
+                <field name="idTrabajador" widget="many2one"/>
             </tree>
         </field>
     </record>
+
     <record id="venta_list_action" model="ir.actions.act_window">
         <field name="name">Ventas</field>
         <field name="res_model">inmobiliaria_upo.venta</field>
