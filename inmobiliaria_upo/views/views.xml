@@ -3,7 +3,7 @@
     <!-- explicit list view definition -->
 <!--
     <record model="ir.ui.view" id="inmobiliaria_upo.list">
-      <field name="name">inmobiliariaUPO list</field>
+      <field name="name">InmobiliariaUPO list</field>
       <field name="model">inmobiliaria_upo.inmobiliaria_upo</field>
       <field name="arch" type="xml">
         <tree>
@@ -18,7 +18,7 @@
     <!-- actions opening views on models -->
 <!--
     <record model="ir.actions.act_window" id="inmobiliaria_upo.action_window">
-      <field name="name">inmobiliariaUPO window</field>
+      <field name="name">InmobiliariaUPO window</field>
       <field name="res_model">inmobiliaria_upo.inmobiliaria_upo</field>
       <field name="view_mode">tree,form</field>
     </record>
@@ -27,7 +27,7 @@
     <!-- server action to the one above -->
 <!--
     <record model="ir.actions.server" id="inmobiliaria_upo.action_server">
-      <field name="name">inmobiliariaUPO server</field>
+      <field name="name">InmobiliariaUPO server</field>
       <field name="model_id" ref="model_inmobiliaria_upo_inmobiliaria_upo"/>
       <field name="state">code</field>
       <field name="code">
@@ -42,7 +42,7 @@
 
     <!-- Top menu item -->
 <!--
-    <menuitem name="inmobiliariaUPO" id="inmobiliaria_upo.menu_root"/>
+    <menuitem name="InmobiliariaUPO" id="inmobiliaria_upo.menu_root"/>
 -->
     <!-- menu categories -->
 <!--

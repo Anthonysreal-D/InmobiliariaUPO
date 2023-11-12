@@ -6,6 +6,5 @@ class propietario(models.Model):
     _name = 'inmobiliaria_upo.propietario'
     _inherit = "inmobiliaria_upo.persona"
     
-    sIdPropietario = fields.Char(string="ID Propietario", required=True)
+    sIdPropietario = fields.Char(string="ID Propietario", required=True, size=5)
     sValoracion = fields.Char(string="Valoración", size=2500)
-    #idPropiedad = fields.One2many('inmobiliaria_upo.propiedad', string="ID Propiedad")
