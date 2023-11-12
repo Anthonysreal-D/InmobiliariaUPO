@@ -7,7 +7,6 @@
                 <sheet layout="auto">
                     <group>
                         <field name="name" />
-                        <field name="cif" />
                         <field name="nombre" />
                         <field name="telefono" />
                         <field name="email" />   
@@ -17,6 +16,18 @@
             </form>
         </field>
     </record>
+
+    <record id="inmobiliaria_upo_empresa_tree_view" model="ir.ui.view">
+    <field name="name">inmobiliaria_upo.empresa.tree</field>
+    <field name="model">inmobiliaria_upo.empresa</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name" />
+        <field name="nombre" />
+        <field name="email" />
+      </tree>
+    </field>
+  </record>
 
     <record id="empresa_list_action" model="ir.actions.act_window">
     <field name="name">Empresa</field>

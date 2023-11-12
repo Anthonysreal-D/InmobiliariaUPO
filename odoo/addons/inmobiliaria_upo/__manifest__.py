@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "InmobiliariaUPO",
+    'name': "Inmobiliaria UPO",
 
     'summary': "Gestion del modulo InmobiliariaUPO",
 
@@ -12,8 +12,8 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Ventas',
-    'version': '0.1',
+    'category': 'Gestion',
+    'version': '0.4',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
@@ -31,7 +31,11 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/inmobiliaria_upo.empresa.csv',
+        'demo/inmobiliaria_upo.trabajador.csv',
+        'demo/inmobiliaria_upo.subasta.csv',
+        'demo/inmobiliaria_upo.puja.csv',
+
     ],
     'application': True,
 }
