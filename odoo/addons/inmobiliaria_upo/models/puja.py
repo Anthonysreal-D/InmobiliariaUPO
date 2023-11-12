@@ -8,10 +8,6 @@ class Puja(models.Model):
      _description = 'Puja'
      _inherit = 'inmobiliaria_upo.operacion'
      
-     #El modelo trabajador deberia heredar los campos del modulo Operacion
-     #Pero debido a que lo realiza otro compañero no lo tengo disponible asi pues
-     #lo dejo marcado
-
      #El NAME es el ID de nuestra puja
      name = fields.Char(string="ID Puja", size=10, required=True, help="Cif de la empresa")
      puja = fields.Integer(string="Importe de la puja", required=True, help="Dinero pujado")

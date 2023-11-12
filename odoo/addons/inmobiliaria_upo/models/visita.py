@@ -7,7 +7,7 @@ class Visita(models.Model):
      _name = 'inmobiliaria_upo.visita'
      _description = 'Visita'
 
-     idVisita = fields.Char(string="ID Visita", size=8, required=True)
+     name = fields.Char(string="ID Visita", size=8, required=True)
      fecha = fields.Char('Fecha', required=True)
      hora = fields.Char('Hora', required=True)
      idCliente = fields.Char(string="ID Cliente", size=9, required=True)
@@ -15,6 +15,8 @@ class Visita(models.Model):
      interes = fields.Char('Interes', required=True)
      idPropiedad = fields.Char(string="ID Propiedad", size=8, required=True)
 
-    # ids_Propiedades = fields.Many2one("inmobiliaria_upo.propiedad",string="Propiedades")
+     ids_Propiedades = fields.Many2one("inmobiliaria_upo.propiedad",string="Propiedades")
+     ids_Clientes = fields.Many2one("inmobiliaria_upo.cliente", string="Clientes")
+     
 
 

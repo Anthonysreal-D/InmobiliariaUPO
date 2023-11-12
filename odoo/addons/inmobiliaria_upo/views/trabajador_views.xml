@@ -7,6 +7,7 @@
                 <sheet layout="auto">
                     <group>
                         <field name="name" />
+                        <field name="sueldo" />
                         <field name="sNombre" />
                         <field name="iEdad" />
                         <field name="sEmail" />

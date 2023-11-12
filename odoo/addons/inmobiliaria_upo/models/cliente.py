@@ -11,3 +11,4 @@ class cliente(models.Model):
     sCiudad = fields.Char(string="Ciudad")  
     
     idOperacion = fields.One2many("inmobiliaria_upo.operacion","idCliente","Operacion")
+    ids_Alquiler = fields.One2many("inmobiliaria_upo.alquiler", 'ids_Clientes', 'Alquileres')

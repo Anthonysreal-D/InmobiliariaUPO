@@ -9,12 +9,11 @@ class Propiedad(models.Model):
 
      idPropietario = fields.Char(string="ID Propietario", size=9, required=True)
      municipio = fields.Char('Municipio', required=True)
-     idPropiedad = fields.Char(string="ID Propiedad", size=8, required=True)
+     name = fields.Char(string="ID Propiedad", size=8, required=True)
      nombre = fields.Char(string="Nombre", size=50, required=True)
      calle = fields.Char(string="Calle", required=True)
      codigoPostal = fields.Char(string="Codigo Postal", size=5, required=True)
 
-      #ids_Tipos = fields.Many2one("inmobiliaria_upo.tipo",string="Tipos")
-      #ids_Visitas = fields.One2many("inmobiliaria_upo.visita",'ids_Propiedades','Visitas')
-     idOperacion = fields.One2many("inmobiliaria_upo.operacion","idPropiedad","Operacion") 
-      
+     ids_Tipos = fields.Many2one("inmobiliaria_upo.tipo",string="Tipos")
+     ids_Visitas = fields.One2many("inmobiliaria_upo.visita",'ids_Propiedades','Visitas')
+     ids_Propietarios = fields.Many2one("inmobiliaria_upo.propietario", string="Propietarios")

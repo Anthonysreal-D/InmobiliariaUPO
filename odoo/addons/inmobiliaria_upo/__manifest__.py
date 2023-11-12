@@ -46,7 +46,6 @@
         'demo/inmobiliaria_upo.empresa.csv',
         'demo/inmobiliaria_upo.trabajador.csv',
         'demo/inmobiliaria_upo.subasta.csv',
-        'demo/inmobiliaria_upo.puja.csv',
 
     ],
     'application': True,

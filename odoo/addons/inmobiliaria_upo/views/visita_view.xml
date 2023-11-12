@@ -6,18 +6,36 @@
             <form string="Visita">
                 <sheet layout="auto">
                     <group>
-                        <field name="idVisita" />
+                        <field name="name" />
                         <field name="fecha" />
                         <field name="hora" />
                         <field name="idCliente" /> 
                         <field name="valoracion" /> 
                         <field name="interes" /> 
-                        <field name="idPropiedad" />   
+                        <field name="idPropiedad" /> 
+                        <field name="ids_Propiedades" widget='many2one'/>  
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
+
+  <record id="inmobiliaria_upo_visita_tree_view" model="ir.ui.view">
+    <field name="name">inmobiliaria_upo.visita.tree</field>
+    <field name="model">inmobiliaria_upo.visita</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+                        <field name="name" />
+                        <field name="fecha" />
+                        <field name="hora" />
+                        <field name="idCliente" /> 
+                        <field name="valoracion" /> 
+                        <field name="interes" /> 
+                        <field name="idPropiedad" /> 
+                        <field name="ids_Propiedades" widget='many2one'/>
+      </tree>
+    </field>
+  </record>
 
     <record id="visita_list_action" model="ir.actions.act_window">
     <field name="name">Visita</field>
