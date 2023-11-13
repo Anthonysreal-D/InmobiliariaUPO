@@ -9,12 +9,61 @@
                 <field name="sApellidoUno"/>
                 <field name="sApellidoDos"/>
                 <field name="iEdad"/>
-                <field name="sEmail"/>
-                <field name="iTelefono"/>
+                <field name="work_email"/>
+                <field name="phone"/>
                 <field name="sIdCliente"/>
-                <field name="sPais"/>
+                <field name="country_id"/>
                 <field name="sCiudad"/>
             </tree>
+        </field>
+    </record>
+
+    <record id="inmobiliaria_upo_cliente_kanban" model="ir.ui.view">
+        <field name="name">inmobiliaria_upo.kanban</field>
+        <field name="model">inmobiliaria_upo.cliente</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" sample="1" quick_create="false">
+                <field name="name"/>
+                <field name="sNombre"/>
+                <field name="sApellidoUno"/>
+                <field name="sApellidoDos"/>
+                <field name="work_email"/>
+                <field name="sIdCliente"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                            <div class="o_kanban_record_top mb16">
+                                <div class="o_kanban_record_headings mt4">
+                                    <strong class="o_kanban_record_title">
+                                        <span t-out="record.name.value"/>
+                                    </strong>
+                                </div>
+                                <strong>
+                                    <div>
+                                        <field name="sNombre"/>
+                                    </div>
+                                    <div>
+                                        <field name="sApellidoUno"/>
+                                    </div>
+                                    <div>
+                                        <field name="sApellidoDos"/>
+                                    </div>
+                                    <div>
+                                        <field name="sIdCliente"/>
+                                    </div>
+                                </strong>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left text-muted">
+                                    <div>
+                                        <field name="work_email"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 
@@ -30,14 +79,13 @@
                         <field name="sApellidoUno"/>
                         <field name="sApellidoDos"/>
                         <field name="iEdad"/>
-                        <field name="sEmail"/>
-                        <field name="iTelefono"/>
+                        <field name="work_email"/>
+                        <field name="phone"/>
                         <field name="sIdCliente"/>
-                        <field name="sPais"/>
+                        <field name="country_id"/>
                         <field name="sCiudad"/>
                     </group>
                 </sheet>
-                
             </form>
         </field>
     </record>
@@ -45,7 +93,7 @@
     <record model="ir.actions.act_window" id="cliente_list_action">
       <field name="name">Cliente</field>
       <field name="res_model">inmobiliaria_upo.cliente</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">tree,form,kanban</field>
       <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">Create the first class</p>
       </field>

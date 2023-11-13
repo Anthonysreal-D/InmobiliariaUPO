@@ -10,7 +10,7 @@
                         <field name="sueldo" />
                         <field name="sNombre" />
                         <field name="iEdad" />
-                        <field name="sEmail" />
+                        <field name="work_email" />
                         <field name="ids_Empresas" widget="many2one" />
                     </group>
                 </sheet>
@@ -29,8 +29,8 @@
         <field name="sApellidoUno" />
         <field name="sApellidoDos" />
         <field name="iEdad" />
-        <field name="sEmail" />
-        <field name="iTelefono" />
+        <field name="work_email" />
+        <field name="phone" />
       </tree>
     </field>
   </record>

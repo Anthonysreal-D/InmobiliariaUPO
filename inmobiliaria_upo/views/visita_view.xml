@@ -14,6 +14,7 @@
                         <field name="interes" /> 
                         <field name="idPropiedad" /> 
                         <field name="ids_Propiedades" widget='many2one'/>  
+                        <field name="ids_Clientes" widget='many2one'/>
                     </group>
                 </sheet>
             </form>
@@ -33,6 +34,7 @@
                         <field name="interes" /> 
                         <field name="idPropiedad" /> 
                         <field name="ids_Propiedades" widget='many2one'/>
+                        <field name="ids_Clientes" widget='many2one'/>
       </tree>
     </field>
   </record>
