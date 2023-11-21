@@ -31,7 +31,7 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/inmobiliaria_upo.venta.csv',
     ],
     'application': True,
 }

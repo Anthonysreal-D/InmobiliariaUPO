@@ -27,7 +27,7 @@
                 <field name="amount_total"/>
                 <field name="amount_tax"/>
                 <field name="mensualidades"/>
-                <!--<field name="precioMensual"/>-->
+                <field name="precioMensual"/>
                 <field name="idCliente" />
                 <field name="idPropiedad" />
                 <field name="idSeguro" widget="many2one"/>

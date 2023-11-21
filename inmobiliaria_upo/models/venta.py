@@ -31,15 +31,12 @@ class venta(models.Model):
         default="En venta")
     idSeguro = fields.Many2one("inmobiliaria_upo.seguro",string="seguro")
     
+    @api.depends('amount_total')
     def _comision(self):
-        if self.amount_total > 0:
-            self.amount_tax = self.amount_total/100*10
-        else:
-            self.amount_tax = 0
+        for record in self:
+            if record.amount_total > 0:
+                record.amount_tax = record.amount_total/100*10
+            else:
+                record.amount_tax = 0
         
     
-    #_description = 'InmobiliariaUPO venta'
-    
-    #precio = fields.Float(string = "Precio")
-    #fecha = fields.Datetime(string = "Fecha")
-    #comision = fields.Integer(string = "Comision")
