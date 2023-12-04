@@ -12,7 +12,7 @@ class compra(models.Model):
     partner_id = fields.Many2one(required=False)
     
     amount_total = fields.Monetary(compute=False, required=True, readonly=False)
-    amount_tax = fields.Monetary(compute='_comision')
+    amount_tax = fields.Monetary(compute="_comision")
     mensualidades = fields.Integer(string="Nº mensualidades", default=1)
     precioMensual = fields.Monetary(string="Importe mensual", compute='_compute_precioMensual')
     idSeguro = fields.Many2one("inmobiliaria_upo.seguro", string="seguro")
@@ -36,4 +36,10 @@ class compra(models.Model):
     @api.constrains('mensualidades')
     def _validar_mensualidades(self):
         if self.mensualidades < 1 or self.mensualidades > 12:
-            raise ValidationError("El numero de mensualidades debe estra entre 1 y 12 incluidos")
+            raise ValidationError("El numero de mensualidades debe estra entre 1 y 12 incluidos.")
+        
+    @api.comstrains('amount_total')
+    def _validar_amount_total(self):
+        if self.amount_total < 0:
+            raise ValidationError("El total no puede ser negativo.")
+          

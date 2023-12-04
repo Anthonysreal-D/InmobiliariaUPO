@@ -1,0 +1,51 @@
+<odoo>
+    <record model="ir.ui.view" id="inmobiliaria_upo_propietario_tree">
+        <field name="name">inmobiliaria_upo.list</field>
+        <field name="model">inmobiliaria_upo.propietario</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="sNombre"/>
+                <field name="sApellidoUno"/>
+                <field name="sApellidoDos"/>
+                <field name="iEdad"/>
+                <field name="sEmail"/>
+                <field name="iTelefono"/>
+                <field name="sIdPropietario"/>
+                <field name="sValoracion"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="inmobiliaria_upo_propietario_form">
+        <field name="name">inmobiliaria_upo.Formulario</field>
+        <field name="model">inmobiliaria_upo.propietario</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet layout="auto">
+                    <group>
+                        <field name="name"/>
+                        <field name="sNombre"/>
+                        <field name="sApellidoUno"/>
+                        <field name="sApellidoDos"/>
+                        <field name="iEdad"/>
+                        <field name="sEmail"/>
+                        <field name="iTelefono"/>
+                        <field name="sIdPropietario"/>
+                        <field name="sValoracion"/>
+                    </group>
+                </sheet>
+                
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="propietario_list_action">
+      <field name="name">Cliente</field>
+      <field name="res_model">inmobiliaria_upo.propietario</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first class</p>
+      </field>
+    </record>
+</odoo>

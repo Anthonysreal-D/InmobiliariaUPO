@@ -7,10 +7,11 @@
                 <sheet layout="auto">
                     <group>
                         <field name="amount_total" />
-                        <field name="idCliente" />
-                        <field name="idPropiedad" />
                         <field name="mensualidades"/>
                         <field name="idSeguro" widget="many2one"/>
+                        <field name="idCliente" widget="many2one"/>
+                        <field name="idPropiedad" widget="many2one"/>
+                        <field name="idTrabajador" widget="many2one"/>
                     </group>
                 </sheet>
             </form>
@@ -31,6 +32,9 @@
                 <field name="idCliente" />
                 <field name="idPropiedad" />
                 <field name="idSeguro" widget="many2one"/>
+                <field name="idCliente" widget="many2one"/>
+                <field name="idPropiedad" widget="many2one"/>
+                <field name="idTrabajador" widget="many2one"/>
             </tree>
         </field>
     </record>
