@@ -26,6 +26,8 @@
         # 'security/ir.model.access.csv',
         'security/security.xml',
         'security/ir.model.access.csv',
+        'reports/reports.xml',
+        'reports/seguro_report.xml',
         'views/cliente_view.xml',
         'views/propietario_view.xml',
         'views/empresa_views.xml',
@@ -43,9 +45,7 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/inmobiliaria_upo.empresa.csv',
-        'demo/inmobiliaria_upo.trabajador.csv',
-        'demo/inmobiliaria_upo.subasta.csv',
+        
 
     ],
     'application': True,

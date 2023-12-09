@@ -4,6 +4,9 @@
         <field name="model">inmobiliaria_upo.venta</field>
         <field name="arch" type="xml">
             <form string="Venta">
+                <header>
+                    <button name="btn_submit_to_comprado" string="Comprado" type="object" class="oe_highlight" />
+                </header>
                 <sheet layout="auto">
                     <group>
                         <field name="amount_total" />

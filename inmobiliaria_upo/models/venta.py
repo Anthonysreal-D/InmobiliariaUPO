@@ -40,7 +40,10 @@ class venta(models.Model):
             else:
                 record.amount_tax = 0
 
-    @api.comstrains('amount_total')
+    @api.constrains('amount_total')
     def _validar_amount_total(self):
         if self.amount_total < 0:
             raise ValidationError("El total no puede ser negativo.")
+    
+    def btn_submit_to_comprado(self):
+        self.write({'state':'Comprado'})

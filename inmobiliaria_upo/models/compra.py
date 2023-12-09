@@ -38,7 +38,7 @@ class compra(models.Model):
         if self.mensualidades < 1 or self.mensualidades > 12:
             raise ValidationError("El numero de mensualidades debe estra entre 1 y 12 incluidos.")
         
-    @api.comstrains('amount_total')
+    @api.constrains('amount_total')
     def _validar_amount_total(self):
         if self.amount_total < 0:
             raise ValidationError("El total no puede ser negativo.")

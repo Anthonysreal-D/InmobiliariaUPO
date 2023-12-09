@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="report_inmobiliaria_upo_seguro_report" model="ir.actions.report">
+        <field name="name">Informe Seguro</field>
+        <field name="model">inmobiliaria_upo.seguro</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_seguro_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_seguro"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_inmobiliaria_upo_compra_report" model="ir.actions.report">
+        <field name="name">Informe Compra</field>
+        <field name="model">inmobiliaria_upo.compra</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_compra_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_compra"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_inmobiliaria_upo_venta_report" model="ir.actions.report">
+        <field name="name">Informe Venta</field>
+        <field name="model">inmobiliaria_upo.venta</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_venta_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_venta"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

@@ -27,7 +27,7 @@ class seguro(models.Model):
         elif not self.idVenta.exists() and not self.idCompra.exists():
             raise ValidationError("El seguro debe pertenecer a una compra o una venta.")
     
-    @api.comstrains('importe')
+    @api.constrains('importe')
     def _validar_importe(self):
         if self.importe < 0:
             raise ValidationError("El importe no puede ser negativo.")
