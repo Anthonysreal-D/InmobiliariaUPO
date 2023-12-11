@@ -1,7 +1,7 @@
 # InmobiliariaUPO
 Proyecto para la asignatura de Tecnologias en Sistemas de Informacion del grupo 1
 -----------------------------------------------------------
-Documento de Visión y analisis actualizado a 12/11/2023
+Documento de Visión y analisis actualizado a 11/12/2023
 -----------------------------------------------------------
 Partición del módulo y trabajo:
 -	José Antonio (Persona, Cliente, Propietario).
