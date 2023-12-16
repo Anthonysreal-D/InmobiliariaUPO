@@ -7,7 +7,10 @@
                 <sheet layout="auto">
                     <group>
                         <field name="name" />
-                        <field name="sueldo" /> 
+                        <field name="sueldo" />
+                        <field name="sNombre" />
+                        <field name="iEdad" />
+                        <field name="work_email" />
                         <field name="ids_Empresas" widget="many2one" />
                     </group>
                 </sheet>
@@ -21,15 +24,13 @@
     <field name="arch" type="xml">
       <tree string="tree_string">
         <field name="name" />
-        <!--
-        Faltarian ciertos campos de haber heredado del modulo persona
+        <field name="sueldo" />
         <field name="sNombre" />
         <field name="sApellidoUno" />
         <field name="sApellidoDos" />
         <field name="iEdad" />
-        <field name="sEmail" />
-        <field name="iTelefono" />
-        -->
+        <field name="work_email" />
+        <field name="phone" />
       </tree>
     </field>
   </record>

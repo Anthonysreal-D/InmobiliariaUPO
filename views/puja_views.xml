@@ -22,10 +22,6 @@
             <tree string="tree_string">
                 <field name="name" />
                 <field name="puja" />
-        <!--
-        Faltarian ciertos campos de haber heredado del modulo operacion
-        -->
-
             </tree>
         </field>
     </record>

@@ -1,0 +1,100 @@
+<odoo>
+    <record model="ir.ui.view" id="inmobiliaria_upo_propietario_tree">
+        <field name="name">inmobiliaria_upo.list</field>
+        <field name="model">inmobiliaria_upo.propietario</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="sNombre"/>
+                <field name="sApellidoUno"/>
+                <field name="sApellidoDos"/>
+                <field name="iEdad"/>
+                <field name="work_email"/>
+                <field name="phone"/>
+                <field name="sIdPropietario"/>
+                <field name="sValoracion"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="inmobiliaria_upo_propietario_kanban" model="ir.ui.view">
+        <field name="name">inmobiliaria_upo.kanban</field>
+        <field name="model">inmobiliaria_upo.propietario</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" sample="1" quick_create="false">
+                <field name="name"/>
+                <field name="sNombre"/>
+                <field name="sApellidoUno"/>
+                <field name="sApellidoDos"/>
+                <field name="work_email"/>
+                <field name="sIdPropietario"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                            <div class="o_kanban_record_top mb16">
+                                <div class="o_kanban_record_headings mt4">
+                                    <strong class="o_kanban_record_title">
+                                        <span t-out="record.name.value"/>
+                                    </strong>
+                                </div>
+                                <strong>
+                                    <div>
+                                        <field name="sNombre"/>
+                                    </div>
+                                    <div>
+                                        <field name="sApellidoUno"/>
+                                    </div>
+                                    <div>
+                                        <field name="sApellidoDos"/>
+                                    </div>
+                                    <div>
+                                        <field name="sIdPropietario"/>
+                                    </div>
+                                </strong>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left text-muted">
+                                    <div>
+                                        <field name="work_email"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="inmobiliaria_upo_propietario_form">
+        <field name="name">inmobiliaria_upo.Formulario</field>
+        <field name="model">inmobiliaria_upo.propietario</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet layout="auto">
+                    <group>
+                        <field name="name"/>
+                        <field name="sNombre"/>
+                        <field name="sApellidoUno"/>
+                        <field name="sApellidoDos"/>
+                        <field name="iEdad"/>
+                        <field name="work_email"/>
+                        <field name="phone"/>
+                        <field name="sIdPropietario"/>
+                        <field name="sValoracion"/>
+                    </group>
+                </sheet>
+                
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="propietario_list_action">
+      <field name="name">Propietario</field>
+      <field name="res_model">inmobiliaria_upo.propietario</field>
+      <field name="view_mode">tree,form,kanban</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first class</p>
+      </field>
+    </record>
+</odoo>
