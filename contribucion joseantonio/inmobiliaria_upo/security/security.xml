@@ -1,5 +1,0 @@
-<odoo>
-    <record id="group_inmobiliaria_upo_manager" model="res.groups">
-        <field name="name"> InmobiliariaUPO / Manager</field>
-    </record>
-</odoo>
