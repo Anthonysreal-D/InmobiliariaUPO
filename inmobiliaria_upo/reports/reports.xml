@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="report_inmobiliaria_upo_cliente_report" model="ir.actions.report">
+        <field name="name">Informe Cliente</field>
+        <field name="model">inmobiliaria_upo.cliente</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_cliente_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_cliente"/>
+        <field name="binding_type">report</field>
+    </record>
+
+
+    <record id="report_inmobiliaria_upo_propietario_report" model="ir.actions.report">
+        <field name="name">Informe Propietario</field>
+        <field name="model">inmobiliaria_upo.propietario</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_propietario_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_propietario"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
