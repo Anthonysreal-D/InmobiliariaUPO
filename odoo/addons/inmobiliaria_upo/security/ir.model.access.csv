@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-persona_manager,persona_manager,model_inmobiliaria_upo_persona,group_inmobiliaria_upo_manager,1,1,1,1
-cliente_manager,cliente_manager,model_inmobiliaria_upo_cliente,group_inmobiliaria_upo_manager,1,1,1,1
-propietario_manager,propietario_manager,model_inmobiliaria_upo_propietario,group_inmobiliaria_upo_manager,1,1,1,1
