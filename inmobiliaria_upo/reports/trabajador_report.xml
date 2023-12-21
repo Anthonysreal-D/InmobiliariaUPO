@@ -1,0 +1,12 @@
+<odoo>
+    <template id="inmobiliaria_upo_trabajador_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <t t-esc="doc.name" />
+                    <t t-esc="doc.sueldo" />
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
