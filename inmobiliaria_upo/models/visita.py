@@ -18,5 +18,12 @@ class Visita(models.Model):
      ids_Propiedades = fields.Many2one("inmobiliaria_upo.propiedad",string="Propiedades")
      ids_Clientes = fields.Many2one("inmobiliaria_upo.cliente", string="Clientes")
      
+     _sql_constraints = [('visita_name_unique','UNIQUE (name)','El ID debe ser único')]
 
+     numClientes = fields.Integer(compute='_clientesTotal',string='Numero de clientes',store=True)
+
+     @api.depends('ids_Clientes')
+     def _clientesTotal(self): 
+          for record in self:
+               record.numClientes = len(record.ids_Clientes)
 
