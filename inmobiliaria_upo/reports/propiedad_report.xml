@@ -1,0 +1,74 @@
+<odoo>
+    <template id="inmobiliaria_upo_propiedad_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">                    <!-- Probad tambien con web.internal_layout -->
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="row" style="font-size: 24px; margin-bottom: 20px;">
+                            <span style="font-weight: bold; text-decoration: underline; ">Nombre:</span>
+                            <span style="color: #999999;" t-field="o.nombre" />
+                        </div>
+                        <div class="row">                            
+                            <div class="col-xs-2" style="font-size: 14px; margin-bottom: 20px;">
+                                <span style="font-weight: normal; ">ID Propiedad:</span>
+                                <span style="color: #999999;" t-field="o.name" />
+                            </div>
+                            <div class="col-xs-8" style="text-align: left; margin: auto; padding-left: 15px; padding-top: 10px;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                <strong>Municipio: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Calle: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Codigo postal: </strong>
+                                            </p>            
+                                            <p>
+                                                <strong>Numero de propietarios: </strong>
+                                            </p>                                                                                                                         
+                                        </td>
+                                        <td style="padding-left: 10px;">
+                                            <p t-field="o.municipio" />
+                                            <p t-field="o.calle" />
+                                            <p t-field="o.codigoPostal" />
+                                            <p t-field="o.numPropietarios" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div t-if="o.ids_Propietarios" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
+                            Propietarios del inmueble <span t-field="o.name" />
+                        </div>
+                        <div t-if="o.ids_Propietarios" id="propietarios_inmueble" class="row" style="margin-top: 10px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID Propietario</th>
+                                        <th>Valoracion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.ids_Propietarios" t-as="propietario">
+                                        <tr>
+                                            <td>
+                                                <p t-field="propietario.sIdPropietario" />
+                                            </td>
+                                            <td>
+                                                <p t-field="propietario.sValoracion" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

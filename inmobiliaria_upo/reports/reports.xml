@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="report_inmobiliaria_upo_empresa_report" model="ir.actions.report">
+        <field name="name">Informe Empresa</field>
+        <field name="model">inmobiliaria_upo.empresa</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_empresa_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_empresa"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_inmobiliaria_upo_trabajador_report" model="ir.actions.report">
+        <field name="name">Informe del Trabajador</field>
+        <field name="model">inmobiliaria_upo.trabajador</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_trabajador_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_trabajador"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_inmobiliaria_upo_propiedad_report" model="ir.actions.report">
+        <field name="name">Informe de la propiedad</field>
+        <field name="model">inmobiliaria_upo.propiedad</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_propiedad_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_propiedad"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_inmobiliaria_upo_alquiler_report" model="ir.actions.report">
+        <field name="name">Informe del alquiler</field>
+        <field name="model">inmobiliaria_upo.alquiler</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_alquiler_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_alquiler"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
