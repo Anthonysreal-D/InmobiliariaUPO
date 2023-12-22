@@ -1,0 +1,71 @@
+<odoo>
+    <template id="inmobiliaria_upo_cliente_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="page">
+                    <div class="oe_structure" />
+                    <div class="row" style="font-size: 48px; margin-bottom: 20px; text-decoration: underline;">
+                        <strong t-field="o.nombre" style="color: black;"/>
+                        <strong t-field="o.apellidoUno" style="color: black;"/>
+                        <strong t-if="o.apellidoDos" style="color: black;" t-field="o.apellidoDos"/>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8" style="text-align: left; margin: auto; padding-left: 15px; padding-top: 10px; font-size: 24px;">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <strong>DNI:</strong>
+                                        </p>
+                                        <p>
+                                            <strong>ID Cliente:</strong>
+                                        </p>
+                                    </td>
+                                    <td style="padding-left: 10px;">
+                                        <p t-field="o.name" />
+                                        <p t-field="o.idCliente" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2" style="text-align: left; margin: auto; padding-left: 15px; padding-top: 10px;">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <span>Edad:</span>
+                                        </p>
+                                        <p>
+                                            <span>Pais:</span>
+                                        </p>
+                                        <p>
+                                            <span>Ciudad:</span>
+                                        </p>
+                                        <p>
+                                            <span>Correo Electronico:</span>
+                                        </p>
+                                        <p>
+                                            <span>Telefono:</span>
+                                        </p>
+                                    </td>
+                                    <td style="padding-left: 10px;">
+                                        <p t-field="o.edad" />
+                                        <p t-field="o.country_id" />
+                                        <p t-field="o.ciudad" />
+                                        <p t-field="o.work_email" />
+                                        <p t-field="o.phone" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -27,6 +27,8 @@
         # 'security/ir.model.access.csv',
         'security/security.xml',
         'security/ir.model.access.csv',
+        'reports/reports.xml',
+        'reports/cliente_report.xml',
         'views/cliente_view.xml',
         'views/propietario_view.xml',
         'views/empresa_views.xml',
