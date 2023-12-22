@@ -17,3 +17,10 @@ class Subasta(models.Model):
      ids_Pujas = fields.One2many("inmobiliaria_upo.puja",'ids_Subastas','Pujas')
      
      _sql_constraints = [('subasta_id_unique','UNIQUE (name)','El ID de la subasta debe ser único')]
+
+     @api.onchange('ids_Pujas.puja')
+     def onchange_ids_pujas_puja(self):
+        if self.ids_Pujas:
+            max_puja = max(self.ids_Pujas.mapped('puja'))
+            if max_puja > self.valorFinal:
+                self.valorFinal = max_puja

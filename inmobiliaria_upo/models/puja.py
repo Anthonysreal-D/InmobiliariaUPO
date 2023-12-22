@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 
 class Puja(models.Model):
@@ -17,8 +18,7 @@ class Puja(models.Model):
      _sql_constraints = [('puja_id_unique','UNIQUE (name)','El ID de la puja debe ser único')]
 
      
-     @api.constrains('puja')
-     def _check_puja_greater_than_valor_final(self):
-        for puja in self:
-            if puja.puja <= puja.ids_Subastas.valorFinal:
-                raise exceptions.ValidationError('La puja debe ser mayor que el valor final de la subasta.')
+     @api.constrains('puja','ids_Subastas')
+     def _check_puja(self):
+            if self.puja <= self.ids_Subastas.valorFinal:
+                raise ValidationError('La puja debe ser mayor que el valor final de la subasta.')
