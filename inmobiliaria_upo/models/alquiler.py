@@ -21,7 +21,7 @@ class Alquiler(models.Model):
      @api.onchange('precio')
      def onchange_alquiler(self):
           resultado = {}
-          if self.capacity < 0:
+          if self.precio < 0:
                resultado = {
                     'value': {'precio':0},
                     'warning': {
