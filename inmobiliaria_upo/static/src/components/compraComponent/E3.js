@@ -22,7 +22,7 @@ class E3Componente extends Component {
     }
 
     async getAllTasks(){
-        this.state.taskList = await this.orm.searchRead(this.model, [], ["mensuaidades", "amount_total"])
+        this.state.taskList = await this.orm.searchRead(this.model, [], ["mensualidades", "amount_total"])
     }
 
     async saveTask(){
