@@ -16,3 +16,12 @@ class Propiedad(models.Model):
      ids_Tipos = fields.Many2one("inmobiliaria_upo.tipo",string="Tipos")
      ids_Visitas = fields.One2many("inmobiliaria_upo.visita",'ids_Propiedades','Visitas')
      ids_Propietarios = fields.Many2one("inmobiliaria_upo.propietario", string="Propietarios")
+
+     _sql_constraints = [('propiedad_name_unique','UNIQUE (name)','El ID debe ser único')]
+
+     numPropietarios = fields.Integer(compute='_propietariosTotal',string='Numero de propietarios',store=True)
+
+     @api.depends('ids_Propietarios')
+     def _propietariosTotal(self): 
+          for record in self:
+               record.numPropietarios = len(record.ids_Propietarios)

@@ -18,3 +18,17 @@ class Alquiler(models.Model):
      ids_Alquileres = fields.One2many("inmobiliaria_upo.alquiler", "ids_ReAlquileres","Alquileres")
      ids_ReAlquileres = fields.Many2one("inmobiliaria_upo.alquiler", string="Re-alquiler")
 
+     @api.onchange('precio')
+     def onchange_alquiler(self):
+          resultado = {}
+          if self.capacity < 0:
+               resultado = {
+                    'value': {'precio':0},
+                    'warning': {
+                         'title':'Valores incorrectos',
+                         'message':'El precio debe ser un valor positivo'
+                    }
+               }
+               return resultado
+
+

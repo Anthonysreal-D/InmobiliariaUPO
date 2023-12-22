@@ -38,4 +38,22 @@
         <field name="binding_type">report</field>
     </record>
 
+    <record id="report_inmobiliaria_upo_propiedad_report" model="ir.actions.report">
+        <field name="name">Informe de la propiedad</field>
+        <field name="model">inmobiliaria_upo.propiedad</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_propiedad_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_propiedad"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_inmobiliaria_upo_alquiler_report" model="ir.actions.report">
+        <field name="name">Informe del alquiler</field>
+        <field name="model">inmobiliaria_upo.alquiler</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inmobiliaria_upo.inmobiliaria_upo_alquiler_template</field>
+        <field name="binding_model_id" ref="model_inmobiliaria_upo_alquiler"/>
+        <field name="binding_type">report</field>
+    </record>
+
 </odoo>

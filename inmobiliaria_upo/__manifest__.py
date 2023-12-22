@@ -32,6 +32,8 @@
         'reports/trabajador_report.xml',
         'reports/cliente_report.xml',
         'reports/propietario_report.xml',
+        'reports/propiedad_report.xml',
+        'reports/alquiler_report.xml',
         'views/cliente_view.xml',
         'views/propietario_view.xml',
         'views/empresa_views.xml',

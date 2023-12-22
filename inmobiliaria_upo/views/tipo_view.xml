@@ -4,11 +4,17 @@
         <field name="model">inmobiliaria_upo.tipo</field>
         <field name="arch" type="xml">
             <form string="Tipo">
+                <header>
+                    <button name="btn_submit_to_estado1" string="Estado1" type="object" class="oe_highlight" />
+                    <button name="btn_submit_to_estado2" string="Estado2" type="object" class="oe_highlight" />
+                    <button name="btn_submit_to_estado3" string="Estado3" type="object" class="oe_highlight" />
+                    <button name="btn_submit_to_estado4" string="Estado4" type="object" class="oe_highlight" />
+                </header>
                 <sheet layout="auto">
                     <group>
                         <field name="idPropiedad" />
                         <field name="name" />
-                        <field name="estado" />
+                        <field name="estado" widget="statusbar"/>
                         <field name="ids_Propiedades" widget='one2many'/>  
                     </group>
                 </sheet>
