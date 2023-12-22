@@ -21,4 +21,5 @@
   <menuitem name="Visita" id="visita_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="visita_list_action"/>
   <menuitem name="Empresa OWL" id="empresa_menu_owl_compUno" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="action_owl_C1Componente_js"/>
   <menuitem name="Subasta OWL" id="subasta_menu_owl_componente4" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="action_owl_C2Componente_js"/>
+  <menuitem name="Creacion Cliente OWL" id="cliente_menu_owl_e3" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="action_owl_E3Componente_js"/>
 </odoo>
