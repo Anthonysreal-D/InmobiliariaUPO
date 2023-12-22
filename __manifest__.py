@@ -54,9 +54,9 @@
     ],
     'assets':{
     	'web.assets_backend': [
-            'gym/static/src/components/*/*.js',
-            'gym/static/src/components/*/*.xml',
-            'gym/static/src/components/*/*.scss',
+            'inmobiliaria_upo/static/src/components/*/*.js',
+            'inmobiliaria_upo/static/src/components/*/*.xml',
+            'inmobiliaria_upo/static/src/components/*/*.scss',
     	],
     },
     'application': True,

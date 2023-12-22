@@ -8,6 +8,9 @@
                     <group>
                         <field name="name" />
                         <field name="puja" />
+                        <field name="idPropiedad" />
+                        <field name="idCliente" />
+                        <field name="idTrabajador" />
                         <field name="ids_Subastas" widget="many2one" />
                     </group>
                 </sheet>

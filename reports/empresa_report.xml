@@ -3,10 +3,44 @@
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
                 <div class="page">
-                    <t t-esc="doc.name" />
-                    <t t-esc="doc.nombre" />
-                    <t t-esc="doc.telefono" />
-                    <t t-esc="doc.email" />
+                    <!-- Cabecera con nombre de empresa -->
+                    <div style="font-size: 20pt; font-weight: bold; text-decoration: underline; ">
+                        <span t-field="doc.nombre"/>
+                    </div>
+                    
+                    <!-- CIF -->
+                    <div style="color: blue; font-size: 10pt;">
+                        <span t-field="doc.name"/>
+                    </div>
+                    
+                    <!-- Telefono e email -->
+                    <div style="line-height: 5;">
+                        <th>Telefono:</th> <span t-field="doc.telefono"/> - Email: <span t-field="doc.email"/>
+                    </div>
+                </div>
+                    
+                    <!-- Tabla de trabajadores -->
+                <div>
+                    <th>Trabajadores de la empresa:</th>
+                </div>
+                <div t-if="doc.ids_Trabajadores" id="trabajadores" class="row" style="margin-top: 10px;">
+                        <table class="table">
+                        <thead>
+                            <tr>
+                            <!-- Columnas -->
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Celdas -->
+                            <tr t-foreach="doc.ids_Trabajadores" t-as="trabajador">
+                                <td><span t-field="trabajador.sNombre"/></td>
+                                <td><span t-field="trabajador.sApellidoUno"/></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </t>
         </t>

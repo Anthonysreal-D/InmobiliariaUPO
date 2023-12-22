@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 
 class Trabajador(models.Model):
@@ -16,7 +17,7 @@ class Trabajador(models.Model):
      ids_Empresas = fields.Many2one("inmobiliaria_upo.empresa", string="Empresas")
      idOperacion = fields.One2many("inmobiliaria_upo.operacion","idTrabajador","Operacion")
      
-     _sql_constraints = [('trabajador_id_unique','UNIQUE (name)','El ID del trabajador   debe ser único')]
+     _sql_constraints = [('trabajador_id_unique','UNIQUE (name)','El ID del trabajadordebe ser único')]
      
      #Impide introducir un ID de trabajador incorrecto.
      @api.constrains('name')
@@ -29,5 +30,5 @@ class Trabajador(models.Model):
      #Impide que el sueldo salga del rango establecido.
      @api.constrains('sueldo')
      def _check_telefono(self):
-          if self.sueldo < 1 or self.sueldo > 9.999:
+          if self.sueldo < 1 or self.sueldo > 9999:
                raise ValidationError('El sueldo esta fuera del rango')
