@@ -1,0 +1,49 @@
+<odoo>
+    <record id="inmobiliaria_upo_venta_form_view" model="ir.ui.view">
+        <field name="name">inmobiliaria_upo.venta.form</field>
+        <field name="model">inmobiliaria_upo.venta</field>
+        <field name="arch" type="xml">
+            <form string="Venta">
+                <sheet layout="auto">
+                    <group>
+                        <field name="amount_total" />
+                        <field name="idSeguro" widget="many2one"/>
+                        <field name="idCliente" widget="many2one"/>
+                        <field name="idPropiedad" widget="many2one"/>
+                        <field name="idTrabajador" widget="many2one"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="venta_list">
+        <field name="name">Venta list</field>
+        <field name="model">inmobiliaria_upo.venta</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="state" />
+                <field name="date_order" />
+                <field name="amount_total"/>
+                <field name="amount_tax"/>
+                <field name="idCliente" />
+                <field name="idPropiedad" />
+                <field name="idSeguro" widget="many2one"/>
+                <field name="idCliente" widget="many2one"/>
+                <field name="idPropiedad" widget="many2one"/>
+                <field name="idTrabajador" widget="many2one"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="venta_list_action" model="ir.actions.act_window">
+        <field name="name">Ventas</field>
+        <field name="res_model">inmobiliaria_upo.venta</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crea tu primera venta</p>
+        </field>
+    </record>
+    
+</odoo>
