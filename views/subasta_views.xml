@@ -1,0 +1,68 @@
+<odoo>
+  <record id="inmobiliaria_upo_subasta_form_view" model="ir.ui.view">
+      <field name="name">inmobiliaria_upo.subasta.form</field>
+      <field name="model">inmobiliaria_upo.subasta</field>
+      <field name="arch" type="xml">
+        <form string="Subasta">
+          <sheet layout="auto">
+            <group>
+              <field name="name" />
+            </group>
+            <notebook>
+              <page name="detalles_subasta" string="Detalles subasta">
+                <group>
+                  <field name="valorInicial" />
+                  <field name="valorFinal" />
+                  <field name="fecha" />
+                </group>
+              </page>
+              <page name="pujas" string="Lista de pujas">
+                <group>
+                  <field name="ids_Pujas" widget="one2many" />
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+  </record>
+
+  <record id="inmobiliaria_upo_subasta_calendar_view" model="ir.ui.view">
+    <field name="name">inmobiliaria_upo.subasta.calendar</field>
+    <field name="model">inmobiliaria_upo.subasta</field>
+    <field name="arch" type="xml">
+      <calendar string="Subasta" color="name" date_start="fecha" date_stop="fecha" mode="month">
+        <field name="name" />
+        <field name="valorInicial" />
+        <field name="valorFinal" />
+      </calendar>
+    </field>
+  </record>
+
+  <record id="inmobiliaria_upo_subasta_tree_view" model="ir.ui.view">
+    <field name="name">inmobiliaria_upo.subasta.tree</field>
+    <field name="model">inmobiliaria_upo.subasta</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name" />
+        <field name="valorFinal" />
+        <field name="fecha" />
+      </tree>
+    </field>
+  </record>
+
+    <record id="subasta_list_action" model="ir.actions.act_window">
+        <field name="name">Subasta</field>
+        <field name="res_model">inmobiliaria_upo.subasta</field>
+        <field name="view_mode">tree,form,calendar</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first class</p>
+        </field>
+    </record>
+
+  <record id="action_owl_C2Componente_js" model="ir.actions.client">
+    <field name="name">C2Componente OWL</field>
+    <field name="tag">owl.action_C2Componente_js</field>
+  </record>
+
+</odoo>
