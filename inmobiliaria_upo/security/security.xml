@@ -1,5 +1,0 @@
-<odoo>
-    <record id="group_inmobiliaria_manager" model="res.groups">
-        <field name="name">Inmobiliaria / Manager</field>
-    </record>
-</odoo>
