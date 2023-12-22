@@ -28,6 +28,8 @@
         'security/ir.model.access.csv',
         'reports/reports.xml',
         'reports/seguro_report.xml',
+        'reports/compra_report.xml',
+        'reports/venta_report.xml',
         'views/cliente_view.xml',
         'views/propietario_view.xml',
         'views/empresa_views.xml',

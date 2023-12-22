@@ -5,6 +5,7 @@
         <field name="arch" type="xml">
             <form string="Venta">
                 <header>
+                    <button name="btn_submit_to_en_venta" string="En venta" type="object" class="oe_highlight" />
                     <button name="btn_submit_to_comprado" string="Comprado" type="object" class="oe_highlight" />
                 </header>
                 <sheet layout="auto">
@@ -30,8 +31,6 @@
                 <field name="date_order" />
                 <field name="amount_total"/>
                 <field name="amount_tax"/>
-                <field name="idCliente" />
-                <field name="idPropiedad" />
                 <field name="idSeguro" widget="many2one"/>
                 <field name="idCliente" widget="many2one"/>
                 <field name="idPropiedad" widget="many2one"/>

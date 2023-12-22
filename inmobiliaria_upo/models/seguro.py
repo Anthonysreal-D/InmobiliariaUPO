@@ -20,6 +20,8 @@ class seguro(models.Model):
     idVenta = fields.Many2one("inmobiliaria_upo.venta", 'Venta')
     idCompra = fields.Many2one("inmobiliaria_upo.compra", 'Compra')
     
+    _sql_constraints = [('seguro_name_unique','UNIQUE (name)','El id del seguro debe ser único')]
+    
     @api.constrains('idVenta','idCompra')
     def _validar_relacion(self):
         if self.idVenta.exists() and self.idCompra.exists():

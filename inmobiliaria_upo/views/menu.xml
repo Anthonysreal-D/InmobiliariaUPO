@@ -18,5 +18,5 @@
   <menuitem name="Subasta" id="subasta_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="subasta_list_action"/>
   <menuitem name="Seguro" id="seguro_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="seguro_list_action"/>
   <menuitem name="Tipo" id="tipo_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="tipo_list_action"/>
-  <menuitem name="Visita" id="visita_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="visita_list_action"/>
+  <menuitem name="Visita" id="visita_menu" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="visita_list_action"/>ç
 </odoo>

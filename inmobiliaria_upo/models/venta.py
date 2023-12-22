@@ -47,3 +47,6 @@ class venta(models.Model):
     
     def btn_submit_to_comprado(self):
         self.write({'state':'Comprado'})
+        
+    def btn_submit_to_en_venta(self):
+        self.write({'state':'En venta'})

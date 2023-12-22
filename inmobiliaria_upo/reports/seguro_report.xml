@@ -2,9 +2,51 @@
     <template id="inmobiliaria_upo_seguro_template">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
-                <div class="page">
-                    <t t-esc="doc.name" />
-                </div>
+                <t t-call="web.external_layout"> 
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2>Seguro</h2>
+                                <table>
+                                    <tr>
+                                        <th><strong>ID Seguro:</strong></th>
+                                        <td><p t-field="doc.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th><strong>Importe:</strong></th>
+                                        <td><p t-field="doc.importe"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div t-if="doc.idVenta" class="row">
+                            <h2>Venta asegurada</h2>
+                            <table>
+                                <tr>
+                                    <th><strong>ID Venta:</strong></th>
+                                    <td><p t-field="doc.idVenta.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th><strong>Fecha:</strong></th>
+                                    <td><p t-field="doc.idVenta.date_order" t-field-options='{"format": "M/d/y"}'/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div t-if="doc.idCompra" class="row">
+                            <h2>Compra asegurada</h2>
+                            <table>
+                                <tr>
+                                    <th><strong>ID Venta:</strong></th>
+                                    <td><p t-field="doc.idCompra.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th><strong>Fecha:</strong></th>
+                                    <td><p t-field="doc.idCompra.date_order" t-field-options='{"format": "M/d/y"}'/></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </t>
             </t>
         </t>
     </template>
