@@ -29,8 +29,6 @@
                 <field name="amount_tax"/>
                 <field name="mensualidades"/>
                 <field name="precioMensual"/>
-                <field name="idCliente" />
-                <field name="idPropiedad" />
                 <field name="idSeguro" widget="many2one"/>
                 <field name="idCliente" widget="many2one"/>
                 <field name="idPropiedad" widget="many2one"/>
@@ -57,6 +55,11 @@
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">Crea tu primera compra</p>
         </field>
+    </record>
+
+    <record id="action_owl_E3Componente_js" model="ir.actions.client">
+        <field name="name">E3Componente OWL</field>
+        <field name="tag">owl.action_E3Componente_js</field>
     </record>
     
 </odoo>
