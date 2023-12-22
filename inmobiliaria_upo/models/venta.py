@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 from . import operacion, seguro
 
 class venta(models.Model):
@@ -29,17 +30,23 @@ class venta(models.Model):
             ('Comprado', "No disponible"),
         ], 
         default="En venta")
-    idSeguro = fields.Many2one("inmobiliaria_upo.seguro",string="seguro")
+    idSeguro = fields.Many2one("inmobiliaria_upo.seguro",string="seguro")    
     
+    @api.depends('amount_total')
     def _comision(self):
-        if self.amount_total > 0:
-            self.amount_tax = self.amount_total/100*10
-        else:
-            self.amount_tax = 0
+        for record in self:
+            if record.amount_total > 0:
+                record.amount_tax = record.amount_total/100*10
+            else:
+                record.amount_tax = 0
+
+    @api.constrains('amount_total')
+    def _validar_amount_total(self):
+        if self.amount_total < 0:
+            raise ValidationError("El total no puede ser negativo.")
+    
+    def btn_submit_to_comprado(self):
+        self.write({'state':'Comprado'})
         
-    
-    #_description = 'InmobiliariaUPO venta'
-    
-    #precio = fields.Float(string = "Precio")
-    #fecha = fields.Datetime(string = "Fecha")
-    #comision = fields.Integer(string = "Comision")
+    def btn_submit_to_en_venta(self):
+        self.write({'state':'En venta'})

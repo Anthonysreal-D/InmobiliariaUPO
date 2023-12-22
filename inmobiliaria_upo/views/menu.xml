@@ -23,4 +23,5 @@
   <menuitem name="Subasta OWL" id="subasta_menu_owl_componente4" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="action_owl_C2Componente_js"/>
   <menuitem name="Creacion Cliente OWL" id="cliente_menu_owl_e3" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="action_owl_E3Componente_js"/>
   <menuitem name="Alquiler OWL" id="alquiler_menu_owl" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="action_E3Componente_js"/>
+<menuitem name="Compras OWL" id="compra_menu_owl" parent="inmobiliaria_menu" groups="group_inmobiliaria_manager" action="action_owl_E3Componente_js"/>
 </odoo>

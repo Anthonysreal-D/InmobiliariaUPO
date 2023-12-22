@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 from . import venta, compra
 
 class seguro(models.Model):
@@ -19,3 +20,16 @@ class seguro(models.Model):
     idVenta = fields.Many2one("inmobiliaria_upo.venta", 'Venta')
     idCompra = fields.Many2one("inmobiliaria_upo.compra", 'Compra')
     
+    _sql_constraints = [('seguro_name_unique','UNIQUE (name)','El id del seguro debe ser único')]
+    
+    @api.constrains('idVenta','idCompra')
+    def _validar_relacion(self):
+        if self.idVenta.exists() and self.idCompra.exists():
+            raise ValidationError("El seguro no puede pertenecer a una compra y una venta a la vez.")
+        elif not self.idVenta.exists() and not self.idCompra.exists():
+            raise ValidationError("El seguro debe pertenecer a una compra o una venta.")
+    
+    @api.constrains('importe')
+    def _validar_importe(self):
+        if self.importe < 0:
+            raise ValidationError("El importe no puede ser negativo.")

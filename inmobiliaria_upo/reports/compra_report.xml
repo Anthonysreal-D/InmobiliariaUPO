@@ -1,0 +1,65 @@
+<odoo>
+    <template id="inmobiliaria_upo_compra_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout"> 
+                    <div class="page">
+                        <div class="row">
+                            <h1>Compra</h1>
+                            <table>
+                                <tr>
+                                    <th><strong>ID Compra:</strong></th>
+                                    <td><p t-field="doc.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th><strong>Fecha:</strong></th>
+                                    <td><p t-field="doc.date_order" t-field-options='{"format": "M/d/y"}'/></td>
+                                </tr>
+                                <tr>
+                                    <th><strong>Numero de mensualidades:</strong></th>
+                                    <td><p t-field="doc.mensualidades"/></td>
+                                </tr>
+                                <tr>
+                                    <th><strong>Precio mensual:</strong></th>
+                                    <td><p t-raw="doc.precioMensual" /></td>
+                                </tr>
+                                <tr>
+                                    <th><strong>Precio propiedad:</strong></th>
+                                    <td><p t-raw="doc.amount_total" /></td>
+                                </tr>
+                                <tr>
+                                    <th><strong>Impuesto:</strong></th>
+                                    <td><p t-raw="doc.amount_tax" /></td>
+                                </tr>
+                                <tr>
+                                    <th><strong>Tiene seguro:</strong></th>
+                                    <td>
+                                        <t t-if="doc.idSeguro">
+                                            Si
+                                        </t>
+                                        <t t-else="">
+                                            No
+                                        </t>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div t-if="doc.idSeguro" class="row">
+                            <h2>Seguro</h2>
+                            <table>
+                                <tr>
+                                    <th><strong>ID Seguro:</strong></th>
+                                    <td><p t-field="doc.idSeguro.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th><strong>Importe:</strong></th>
+                                    <td><p t-field="doc.idSeguro.importe"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
