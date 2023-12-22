@@ -7,7 +7,7 @@ class persona(models.Model):
     _inherit = 'hr.employee'
 
     category_ids = fields.Many2many(relation=False)#No es ninguna variable de nuestro programa, no se utiliza simplemente necesito poner su relation como falsa para poder heredar de hr.employee correctamente
-    name = fields.Char(string="DNI", size=10)
+    name = fields.Char(string="DNI", size=9)
     phone = fields.Char(string="Teléfono", size=9)
     work_email = fields.Char(string="Correo Electrónico")
     
@@ -31,4 +31,21 @@ class persona(models.Model):
                 raise ValidationError("El número de teléfono no puede ser negativo")
         except ValueError:
             raise ValidationError("El número de teléfono tiene que ser un número")
+        
+    @api.constrains('name')
+    def _validar_edad(self):
+        if len(self.name) < 9:
+            raise ValidationError("El DNI tiene que tener 9 caracteres")
+        else:
+            numDNI=list(self.name)
+            numDNI[8]=''
+            numDNI="".join(numDNI)
+            try:
+                int(numDNI)
+                if not ((self.name)[8]).isalpha():
+                    raise ValidationError("El último carácter del dni debe ser una letra del abecedario")    
+            except ValueError:
+                raise ValidationError("Los 8 primeros caracteres del dni deben ser números")
+
+        
         
