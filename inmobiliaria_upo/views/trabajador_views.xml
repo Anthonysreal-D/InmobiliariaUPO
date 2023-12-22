@@ -8,8 +8,8 @@
                     <group>
                         <field name="name" />
                         <field name="sueldo" />
-                        <field name="sNombre" />
-                        <field name="iEdad" />
+                        <field name="nombre" />
+                        <field name="edad" />
                         <field name="work_email" />
                         <field name="ids_Empresas" widget="many2one" />
                     </group>
@@ -25,10 +25,10 @@
       <tree string="tree_string">
         <field name="name" />
         <field name="sueldo" />
-        <field name="sNombre" />
-        <field name="sApellidoUno" />
-        <field name="sApellidoDos" />
-        <field name="iEdad" />
+        <field name="nombre" />
+        <field name="apellidoUno" />
+        <field name="apellidoDos" />
+        <field name="edad" />
         <field name="work_email" />
         <field name="phone" />
       </tree>

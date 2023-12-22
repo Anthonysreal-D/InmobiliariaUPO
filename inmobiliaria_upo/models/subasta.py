@@ -15,3 +15,5 @@ class Subasta(models.Model):
      fecha = fields.Date(string="Fecha de la subasta", required=True, help="Fecha en la que se inicia la subasta")
 
      ids_Pujas = fields.One2many("inmobiliaria_upo.puja",'ids_Subastas','Pujas')
+     
+     _sql_constraints = [('subasta_id_unique','UNIQUE (name)','El ID de la subasta debe ser único')]

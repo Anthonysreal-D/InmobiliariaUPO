@@ -52,5 +52,12 @@
         'demo/inmobiliaria_upo.subasta.csv',
 
     ],
+    'assets':{
+    	'web.assets_backend': [
+            'inmobiliaria_upo/static/src/components/*/*.js',
+            'inmobiliaria_upo/static/src/components/*/*.xml',
+            'inmobiliaria_upo/static/src/components/*/*.scss',
+    	],
+    },
     'application': True,
 }

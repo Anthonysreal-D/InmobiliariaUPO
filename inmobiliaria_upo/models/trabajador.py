@@ -16,7 +16,7 @@ class Trabajador(models.Model):
      ids_Empresas = fields.Many2one("inmobiliaria_upo.empresa", string="Empresas")
      idOperacion = fields.One2many("inmobiliaria_upo.operacion","idTrabajador","Operacion")
      
-     _sql_constraints = [('trabajador_id_unique','UNIQUE (name)','El ID del trabajador   debe ser único')]
+     _sql_constraints = [('trabajador_id_unique','UNIQUE (name)','El ID del trabajador debe ser único')]
      
      #Impide introducir un ID de trabajador incorrecto.
      @api.constrains('name')
