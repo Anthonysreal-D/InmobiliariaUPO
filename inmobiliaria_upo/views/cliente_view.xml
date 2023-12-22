@@ -5,15 +5,15 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="sNombre"/>
-                <field name="sApellidoUno"/>
-                <field name="sApellidoDos"/>
-                <field name="iEdad"/>
+                <field name="nombre"/>
+                <field name="apellidoUno"/>
+                <field name="apellidoDos"/>
+                <field name="edad"/>
                 <field name="work_email"/>
                 <field name="phone"/>
-                <field name="sIdCliente"/>
+                <field name="idCliente"/>
                 <field name="country_id"/>
-                <field name="sCiudad"/>
+                <field name="ciudad"/>
             </tree>
         </field>
     </record>
@@ -24,11 +24,11 @@
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile" sample="1" quick_create="false">
                 <field name="name"/>
-                <field name="sNombre"/>
-                <field name="sApellidoUno"/>
-                <field name="sApellidoDos"/>
+                <field name="nombre"/>
+                <field name="apellidoUno"/>
+                <field name="apellidoDos"/>
                 <field name="work_email"/>
-                <field name="sIdCliente"/>
+                <field name="idCliente"/>
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_card oe_kanban_global_click">
@@ -40,16 +40,16 @@
                                 </div>
                                 <strong>
                                     <div>
-                                        <field name="sNombre"/>
+                                        <field name="name"/>
                                     </div>
                                     <div>
-                                        <field name="sApellidoUno"/>
+                                        <field name="apellidoUno"/>
                                     </div>
                                     <div>
-                                        <field name="sApellidoDos"/>
+                                        <field name="apellidoDos"/>
                                     </div>
                                     <div>
-                                        <field name="sIdCliente"/>
+                                        <field name="idCliente"/>
                                     </div>
                                 </strong>
                             </div>
@@ -75,15 +75,15 @@
                 <sheet layout="auto">
                     <group>
                         <field name="name"/>
-                        <field name="sNombre"/>
-                        <field name="sApellidoUno"/>
-                        <field name="sApellidoDos"/>
-                        <field name="iEdad"/>
+                        <field name="nombre"/>
+                        <field name="apellidoUno"/>
+                        <field name="apellidoDos"/>
+                        <field name="edad"/>
                         <field name="work_email"/>
                         <field name="phone"/>
-                        <field name="sIdCliente"/>
+                        <field name="idCliente"/>
                         <field name="country_id"/>
-                        <field name="sCiudad"/>
+                        <field name="ciudad"/>
                     </group>
                 </sheet>
             </form>
@@ -95,7 +95,13 @@
       <field name="res_model">inmobiliaria_upo.cliente</field>
       <field name="view_mode">tree,form,kanban</field>
       <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">Create the first class</p>
+            <p class="o_view_nocontent_smiling_face">Crea el primer cliente</p>
       </field>
     </record>
+
+    <record id="action_owl_E3Componente_js" model="ir.actions.client">
+    <field name="name">E3Componente OWL</field>
+    <field name="tag">owl.action_E3Componente_js</field>
+  </record>
+
 </odoo>
