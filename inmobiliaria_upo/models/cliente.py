@@ -13,3 +13,6 @@ class cliente(models.Model):
     
     idOperacion = fields.One2many("inmobiliaria_upo.operacion","idCliente","Operacion")
     ids_Visitas = fields.One2many("inmobiliaria_upo.visita", 'ids_Clientes', 'Visitas')
+
+    _sql_constraints = [('cliente_name_unique','UNIQUE (name)','El DNI debe ser único')]
+    _sql_constraints = [('cliente_idCliente_unique','UNIQUE (idCliente)','El Id del Cliente debe ser único')]
