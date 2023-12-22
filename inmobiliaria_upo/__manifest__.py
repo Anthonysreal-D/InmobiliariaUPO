@@ -18,8 +18,7 @@
     # any module necessary for this one to work correctly
     'depends': ['base',
                 'sale',
-                'purchase',
-                'hr'],
+                'purchase'],
 
 
     # always loaded
@@ -28,12 +27,9 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'reports/reports.xml',
-        'reports/empresa_report.xml',
-        'reports/trabajador_report.xml',
-        'reports/cliente_report.xml',
-        'reports/propietario_report.xml',
-        'reports/propiedad_report.xml',
-        'reports/alquiler_report.xml',
+        'reports/seguro_report.xml',
+        'reports/compra_report.xml',
+        'reports/venta_report.xml',
         'views/cliente_view.xml',
         'views/propietario_view.xml',
         'views/empresa_views.xml',
@@ -51,17 +47,16 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/inmobiliaria_upo.empresa.csv',
-        'demo/inmobiliaria_upo.trabajador.csv',
-        'demo/inmobiliaria_upo.subasta.csv',
+        
 
     ],
-    'assets':{
-    	'web.assets_backend': [
-            'inmobiliaria_upo/static/src/components/*/*.js',
-            'inmobiliaria_upo/static/src/components/*/*.xml',
-            'inmobiliaria_upo/static/src/components/*/*.scss',
-    	],
-    },
+    #'assets':{
+    #	'web.assets_backend': [
+    #        'inmobiliaria_upo/static/src/components/*/*.js',
+    #        'inmobiliaria_upo/static/src/components/*/*.xml',
+    #        'inmobiliaria_upo/static/src/components/*/*.scss',
+    #	],
+    #},
     'application': True,
+    
 }
